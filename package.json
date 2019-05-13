@@ -1,0 +1,19 @@
+{
+  "name": "pizza_app",
+  "version": "1.0.0",
+  "description": "This is a web application that allows the user to purchase a pizza using the domino's public api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Jacob Spade",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
