@@ -9,6 +9,4 @@ app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)
 });
 
-app.get('/', (req, res) => {
-  res.send('hello world!!');
-})
+app.use('/', require('./routes/api/pizza'))
