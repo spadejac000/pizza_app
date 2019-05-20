@@ -7,7 +7,7 @@ class Menu extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000?_limit=10')
+    axios.get('http://localhost:5000')
       .then(res => console.log(res.data));
   }
 

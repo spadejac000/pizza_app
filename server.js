@@ -2,12 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// myStore.getMenu(
-//   function(storeData){
-//       console.log(storeData.menuByCode);
-//   }
-// );
-
 const app = express();
 app.use(cors())
 
