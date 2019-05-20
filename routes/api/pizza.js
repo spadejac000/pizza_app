@@ -1,8 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const pizzapi = require('dominos'); 
+let myStore = new pizzapi.Store(4336);
+myStore.ID = 4336;
 
 router.get('/', (req, res) => {
-  res.send('hello world!! I am Sam. Not really. My name is actually Jacob. It is a biblical name according to everyone when I tell them my name');
+  console.log(
+    myStore.getMenu(
+      function(storeData){
+          console.log(storeData.menuByCode);
+      }
+    )
+  )
+  res.status(200).json(myStore)
 })
 
 module.exports = router;

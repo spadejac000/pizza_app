@@ -1,24 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const pizzapi = require('dominos'); 
-let myStore = new pizzapi.Store(4336);
-myStore.ID = 4336;
+const cors = require('cors');
 
-myStore.getMenu(
-  function(storeData){
-      console.log(storeData.menuByCode);
-  }
-);
-
-// pizzapi.Util.findNearbyStores(
-//   '700 Clark Ave, St. Louis, MO, 63102',
-//   'Delivery',
+// myStore.getMenu(
 //   function(storeData){
-//       console.log(storeData);
+//       console.log(storeData.menuByCode);
 //   }
 // );
 
 const app = express();
+app.use(cors())
 
 const PORT = process.env.PORT || 5000;
 
