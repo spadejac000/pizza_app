@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import uuid from 'uuid';
 
 class Menu extends Component {
@@ -266,15 +265,120 @@ class Menu extends Component {
           'pineapple'
         ]
       }
+    ],
+    wings: [
+      {
+        type: 'garlic parmasan',
+        price: '13.99',
+        image: 'https://www.spendwithpennies.com/wp-content/uploads/2019/02/Garlic-Parmesan-Wings-SpendWithPennies-24.jpg',
+        id: uuid.v4(),
+        amount: 10
+      },
+      {
+        type: 'bbq',
+        price: '13.99',
+        image: 'https://img.buzzfeed.com/thumbnailer-prod-us-east-1/4c41b09cf41644a7b7ca1780edbeb960/BFV8354_Honey_BBQ_Chicken_Wings-FB1080.jpg',
+        id: uuid.v4(),
+        amount: 10
+      },
+      {
+        type: 'buffalo',
+        price: '13.99',
+        image: 'https://dinnerthendessert.com/wp-content/uploads/2018/08/Buffalo-Wings-4.jpg',
+        id: uuid.v4(),
+        amount: 10
+      },
+      {
+        type: 'salt and pepper',
+        price: '13.99',
+        image: 'https://lh3.googleusercontent.com/-eeXIDn_-oj8/Usuf3xPErLI/AAAAAAAEW9E/AfgOqbnvJMI/s800/salt-and-pepper-wings-13.jpg',
+        id: uuid.v4(),
+        amount: 10
+      }
+    ],
+    sandwiches: [
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      },
+      {
+        type: 'buffalo chicken',
+        price: '11.99',
+        image: 'https://cache.dominos.com/olo/5_60_3/assets/build/market/US/_en/images/img/products/larges/S_BUFC.jpg',
+        id: uuid.v4(),
+        condiments: [
+          'buffalo chicken',
+          'cheese',
+          'red peppers'
+        ]
+      }
     ]
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:5000')
-      .then(res => console.log(res.data));
-  }
-
   render() {
+    console.log(this.state);
     return (
       <div>
         <h1>Menu</h1>
