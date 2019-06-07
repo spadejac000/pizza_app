@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
 import NavMenu from './components/NavMenu';
 import './App.css';
 import {Provider} from './context';

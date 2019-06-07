@@ -6,16 +6,28 @@ const Context = React.createContext();
 export class Provider extends Component {
 
   state = {
+    selectedRestaurant: '',
     restaurants: [
       {
-        path: "/pizza_hut",
+        id: uuid.v4(),
+        path: "/Pizza_Hut",
         title: "Pizza Hut",
         pizzas: [
-    
+          {
+            type: 'cheese pizza',
+            price: '28.88',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'med',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/dominos",
+        id: uuid.v4(),
+        path: "/Dominos",
         title: 'Dominos',
         pizzas: [
           {
@@ -391,45 +403,105 @@ export class Provider extends Component {
         ]
       },
       {
-        path: "/little_ceasars",
+        id: uuid.v4(),
+        path: "/Little_Ceasars",
         title: "Little Ceasars",
         pizzas: [
-          
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/papa_johns",
+        id: uuid.v4(),
+        path: "/Papa_Johns",
         title: "Papa Johns",
         pizzas: [
-          
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/papa_murphys",
+        id: uuid.v4(),
+        path: "/Papa_Murphys",
         title: "Papa Murphys",
         pizzas: [
-          
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/california_pizza_kitchen",
+        id: uuid.v4(),
+        path: "/California_Pizza_Kitchen",
         title: "California Pizza Kitchen",
         pizzas: [
-          
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/marcos_pizza",
+        id: uuid.v4(),
+        path: "/Marcos_pizza",
         title: "Marcos Pizza",
         pizzas: [
-          
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       },
       {
-        path: "/round_table_pizza",
+        id: uuid.v4(),
+        path: "/Round_Table_Pizza",
         title: "Round Table Pizza",
         pizzas: [
-    
+          {
+            type: 'cheese',
+            price: '9.99',
+            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            id: uuid.v4(),
+            size: 'small',
+            toppings: [
+              'cheese'
+            ]
+          }
         ]
       }
     ]
