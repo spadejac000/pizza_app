@@ -21,11 +21,6 @@ class Home extends Component {
               to={restaurant.path} 
               style={buttonStyle} 
               className="mb-2 btn btn-primary"
-              // onClick={() => {
-              //   this.setState({
-              //     selectedRestaurant: restaurant.title
-              //   })
-              // }}
             >
               {restaurant.title}
             </Link>
