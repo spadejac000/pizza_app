@@ -1,46 +1,39 @@
 import React, { Component } from 'react';
 import {Consumer} from '../context';
+import {
+  Container
+} from 'react-bootstrap';
 
 class RestaurantMenu extends Component {
   render() {
     return (
       <Consumer>
         {value => {
-          // for(let i = 0; i < value.restaurants.length; i++) {
-          //   if(value.restaurants[i].path === this.props.match.path) {
-          //     let pizzaTypes = [];
-          //     for(let j = 0; j < value.restaurants[i].pizzas.length; j++) {
-          //       // console.log(value.restaurants[i].pizzas[j].type)
-          //       pizzaTypes.push(value.restaurants[i].pizzas[j].type)
-          //       console.log(pizzaTypes);
-          //       return(() => {
-          //         for(let x = 0; x < pizzaTypes.length; x++) {
-          //           let pizzaTypeTitle = document.createElement('h1');
-          //           pizzaTypeTitle.textContent = pizzaTypes[x];
-          //           document.appendChild(pizzaTypeTitle);
-          //         }
-          //       }) 
-          //     }
-          //   }
-          // }
-
           return(
             value.restaurants.map((restaurant) => (
-              <div>
+              <Container>
+              <div style={menuItemStyle}>
                 {restaurant.path === this.props.match.path ? restaurant.pizzas.map((pizza) => (
-                  <div>
-                    <h1>{pizza.type}</h1>
-                    <h1>{pizza.price}</h1>
-                    <img src={pizza.image} />
-                  </div>
+                    <div style={{textAlign: 'center'}}>
+                      <img src={pizza.image} style={{width: '200px', height: '200px'}} alt="here is a pizza"/>
+                      <h1>{pizza.type}</h1>
+                      <h1>{pizza.price}</h1>
+                    </div>
                 )) : null}
               </div>
+              </Container>
             ))
           )
         }}
       </Consumer>
     )
   }
+}
+
+const menuItemStyle = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr 1fr',
+  justifyContent: 'center'
 }
 
 export default RestaurantMenu;

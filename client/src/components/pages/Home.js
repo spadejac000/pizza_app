@@ -3,12 +3,6 @@ import {Link} from 'react-router-dom';
 import {Consumer} from '../../context';
 
 class Home extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     selectedRestaurant: ''
-  //   }
-  // }
 
   render() {
     return(
