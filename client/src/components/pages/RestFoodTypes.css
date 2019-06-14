@@ -1,4 +1,13 @@
+.foodTypeLinks {
+  display: block;
+  border: 1px dotted grey;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #006491;
+}
+
 .foodTypeLinks:hover {
   background-color: #006491;
+  text-decoration: none;
   color: white;
 }

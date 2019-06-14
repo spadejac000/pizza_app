@@ -6,7 +6,11 @@ const Context = React.createContext();
 export class Provider extends Component {
 
   state = {
-    selectedRestaurant: '',
+    foodImagesMain: {
+      pizzas: 'https://cache.dominos.com/olo/5_62_2/assets/build/market/US/_en/images/img/entree-page/build.png',
+      chicken: 'https://cache.dominos.com/olo/5_62_2/assets/build/market/US/_en/images/img/entree-page/chicken.png',
+      sandwiches: 'https://cache.dominos.com/olo/5_62_2/assets/build/market/US/_en/images/img/entree-page/sandwiches.png'
+    },
     restaurants: [
       {
         id: uuid.v4(),

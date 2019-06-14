@@ -11,25 +11,34 @@ class RestFoodTypes extends Component {
     return (
       <Consumer>
         {value => {
+          // where console log starts
+          value.restaurants.map((restaurant) => (
+            restaurant.path === this.props.match.path 
+            ? Object.keys(restaurant).slice(3).map((foodTypes) => {
+              for(let i = 0; i < Object.keys(value.foodImagesMain).length; i++) {
+                if(Object.keys(value.foodImagesMain)[i] === foodTypes) {
+                  console.log(foodTypes)
+                }
+              }
+              })
+            : null
+          ))
+          // where console log ends
           return(
             value.restaurants.map((restaurant) => (
               <Container>
                 {
                   restaurant.path === this.props.match.path ?
-                // restaurant.map((foodTypes) => (
-                //   <h1>{foodTypes}</h1>
-                // )) 
-                // console.log(restaurant)
-                // <h1>{restaurant}</h1>
-                // console.log(Object.keys(restaurant))
-                  
-                  // for(let i = 0; i < Object.keys(restaurant).length; i++) {
-                  //   console.log(Object.keys(restaurant))
-                  // }
                   Object.keys(restaurant).slice(3).map((foodTypes) => (
-                    <Link className="foodTypeLinks mb-2" style={foodTypeStyles}>{foodTypes}</Link>
+                    <h1>{foodTypes}</h1>
+                  // <Link className="foodTypeLinks mb-2">
+                  //   <img src={foodTypes.image} />
+                  //   {foodTypes}
+                  // </Link>
                   ))
-                : null}
+                : 
+                  null
+                }
               </Container>
             ))
           )
@@ -37,14 +46,6 @@ class RestFoodTypes extends Component {
       </Consumer>
     )
   }
-}
-
-const foodTypeStyles = {
-  display: 'block',
-  border: '1px dotted grey',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  fontWeight: 'bold'
 }
 
 export default RestFoodTypes;
