@@ -7,6 +7,10 @@ import {
 } from 'react-bootstrap';
 
 class RestFoodTypes extends Component {
+  // state = {
+  //   savedFoodType: ''
+  // }
+
   render() {
     return (
       <Consumer>
@@ -18,8 +22,20 @@ class RestFoodTypes extends Component {
               ? Object.keys(restaurant).slice(3).map((foodTypes) => {
                 for(let i = 0; i < Object.keys(value.foodImagesMain).length; i++) {
                   if(Object.keys(value.foodImagesMain)[i] === foodTypes) {
+                    const saveFoodType = () => {
+                      value.savedFoodType.setState({
+                        savedFoodType: Object.keys(value.foodImagesMain)[i]
+                      },
+                      value.savedFoodType.findRoutes()
+                    )
+                      // value.savedFoodType = Object.keys(value.foodImagesMain)[i]
+                    }
                     return (
-                      <Link className="foodTypeLinks mb-2">
+                      <Link 
+                        className="foodTypeLinks mb-2" 
+                        to={`${restaurant.path}/${Object.keys(value.foodImagesMain)[i]}`}
+                        onClick={saveFoodType}
+                      >
                         <img src={value.foodImagesMain[foodTypes]} />
                         {foodTypes}
                       </Link>

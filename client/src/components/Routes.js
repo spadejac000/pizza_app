@@ -11,6 +11,7 @@ class Routes extends Component {
     return (
       <Consumer>
         {value => {
+          console.log(value)
           return(
             <Router>
               <Switch>
@@ -19,6 +20,10 @@ class Routes extends Component {
                 <Route exact path={value.restaurants.map((restaurant) => (
                   restaurant.path
                 ))} component={RestFoodTypes} />
+                <Route exact path={value.restaurants.map((restaurant) => (
+                  // this.props.location.pathname
+                  restaurant.path + '/:' + value.savedFoodType
+                ))} component={RestaurantMenu}/>
               </Switch>
             </Router>
           )
