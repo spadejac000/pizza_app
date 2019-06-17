@@ -11,7 +11,6 @@ class Routes extends Component {
     return (
       <Consumer>
         {value => {
-          console.log(value)
           return(
             <Router>
               <Switch>

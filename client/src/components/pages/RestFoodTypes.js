@@ -28,7 +28,6 @@ class RestFoodTypes extends Component {
                       },
                       value.savedFoodType.findRoutes()
                     )
-                      // value.savedFoodType = Object.keys(value.foodImagesMain)[i]
                     }
                     return (
                       <Link 
