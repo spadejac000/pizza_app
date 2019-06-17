@@ -4,6 +4,7 @@ import {
   Container
 } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import './RestaurantMenu.css';
 
 class RestaurantMenu extends Component {
   state = {
@@ -20,14 +21,17 @@ class RestaurantMenu extends Component {
                 <Container>
                 <div style={menuItemStyle}>
                   {(restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
-                    restaurant[this.props.match.params.default].map((pizza) => (
-                        <div style={{textAlign: 'center'}}>
+                    restaurant[this.props.match.params.default].map((food) => (
+                        <div 
+                          style={{
+                            width: '100%'
+                          }}>
                           <img 
-                            src={pizza.image} 
-                            style={{position: 'relative', width: '100%', height: '150px', borderRadius: '5px'}} 
+                            src={food.image} 
+                            style={{width: '100%', height: '120px', borderRadius: '5px'}} 
                             alt="here is a pizza"/>
                           <Link to="#" className="btn btn-danger mt-1" style={{width: '100%'}}>ORDER</Link>
-                          <h1>{pizza.type}</h1>
+                          <Link to="#" className="foodTypeTitle">{food.type}</Link>
                         </div>
                     )) 
                   
@@ -46,7 +50,7 @@ class RestaurantMenu extends Component {
 
 const menuItemStyle = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+  gridTemplateColumns: '17% 17% 17% 17% 17%',
   gridGap: '1em',
   justifyContent: 'center'
 }

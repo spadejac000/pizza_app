@@ -1,0 +1,8 @@
+.foodTypeTitle {
+  color: #007bff;
+}
+
+.foodTypeTitle:hover {
+  text-decoration: none;
+  color: #d9534f;
+}
