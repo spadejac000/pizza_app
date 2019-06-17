@@ -29,7 +29,7 @@ class RestaurantMenu extends Component {
                 <Container>
                 <div style={menuItemStyle}>
                   {(restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
-                    restaurant.${this.props.match.params.default}.map((pizza) => (
+                    restaurant[this.props.match.params.default].map((pizza) => (
                         <div style={{textAlign: 'center'}}>
                           <img src={pizza.image} style={{width: '200px', height: '200px'}} alt="here is a pizza"/>
                           <h1>{pizza.type}</h1>
