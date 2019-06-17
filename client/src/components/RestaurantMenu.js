@@ -15,16 +15,21 @@ class RestaurantMenu extends Component {
         {value => {
           return(
             value.restaurants.map((restaurant) => {
-              for(let i = 0; i < Object.keys(restaurant).length; i++) {
-                if(this.props.match.params.default === Object.keys(restaurant)[i]) {
-                  console.log(Object.keys(restaurant)[i])
-                }
-              }
+              // for(let i = 0; i < Object.keys(restaurant).length; i++) {
+              //   if(this.props.match.params.default === Object.keys(restaurant)[i]) {
+              //     let food = restaurant.Object.keys(restaurant)[i]
+              //     (restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
+              //       `restaurant.${food}`.map((foodItem) => (
+              //         console.log(foodItem)
+              //       )) 
+              //     : null
+              //   }
+              // }
               return (
                 <Container>
                 <div style={menuItemStyle}>
                   {(restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
-                    restaurant.pizzas.map((pizza) => (
+                    restaurant.${this.props.match.params.default}.map((pizza) => (
                         <div style={{textAlign: 'center'}}>
                           <img src={pizza.image} style={{width: '200px', height: '200px'}} alt="here is a pizza"/>
                           <h1>{pizza.type}</h1>
