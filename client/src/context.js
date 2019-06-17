@@ -38,7 +38,7 @@ export class Provider extends Component {
           {
             type: 'cheese',
             price: '9.99',
-            image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_ZZ.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [
@@ -48,7 +48,7 @@ export class Provider extends Component {
           {
             type: 'pepperoni',
             price: '11.99',
-            image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2Frecipes%2Fck%2Fgluten-free-cookbook%2Fpepperoni-pizza-ck-x.jpg%3Fitok%3DNWreajsZ&w=450&c=sc&poi=face&q=85',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_MX.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [
@@ -59,7 +59,7 @@ export class Provider extends Component {
           {
             type: 'sausage',
             price: '12.99',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeAeEBOf0ntGsoK2r1W9cMeoQnm8z5gQt7mz6JywM2fq90Xj_k',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPH.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [
@@ -70,7 +70,7 @@ export class Provider extends Component {
           {
             type: 'supreme',
             price: '13.99',
-            image: 'https://www.tasteofhome.com/wp-content/uploads/2017/10/exps25356_TH10603D13.jpg',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPV.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [
@@ -85,7 +85,7 @@ export class Provider extends Component {
           {
             type: 'meatlovers',
             price: '9.99',
-            image: 'https://www.bakedbyrachel.com/wp-content/uploads/2014/08/meatloverspizza1_bakedbyrachel.jpg',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZUH.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [
@@ -99,7 +99,7 @@ export class Provider extends Component {
           {
             type: 'vegetarian',
             price: '10.99',
-            image: 'https://tmbidigitalassetsazure.blob.core.windows.net/secure/RMS/attachments/37/1200x1200/Grilled-Veggie-Pizza_EXPS_LSBZ18_48960_D01_18_6b.jpg',
+            image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPV.jpg',
             id: uuid.v4(),
             size: 'small',
             toppings: [

@@ -3,6 +3,7 @@ import {Consumer} from '../context';
 import {
   Container
 } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 class RestaurantMenu extends Component {
   state = {
@@ -15,25 +16,18 @@ class RestaurantMenu extends Component {
         {value => {
           return(
             value.restaurants.map((restaurant) => {
-              // for(let i = 0; i < Object.keys(restaurant).length; i++) {
-              //   if(this.props.match.params.default === Object.keys(restaurant)[i]) {
-              //     let food = restaurant.Object.keys(restaurant)[i]
-              //     (restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
-              //       `restaurant.${food}`.map((foodItem) => (
-              //         console.log(foodItem)
-              //       )) 
-              //     : null
-              //   }
-              // }
               return (
                 <Container>
                 <div style={menuItemStyle}>
                   {(restaurant.path + '/:' + value.savedFoodType) === this.props.match.path ? 
                     restaurant[this.props.match.params.default].map((pizza) => (
                         <div style={{textAlign: 'center'}}>
-                          <img src={pizza.image} style={{width: '200px', height: '200px'}} alt="here is a pizza"/>
+                          <img 
+                            src={pizza.image} 
+                            style={{position: 'relative', width: '100%', height: '150px', borderRadius: '5px'}} 
+                            alt="here is a pizza"/>
+                          <Link to="#" className="btn btn-danger mt-1" style={{width: '100%'}}>ORDER</Link>
                           <h1>{pizza.type}</h1>
-                          <h1>{pizza.price}</h1>
                         </div>
                     )) 
                   
@@ -52,7 +46,8 @@ class RestaurantMenu extends Component {
 
 const menuItemStyle = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr 1fr',
+  gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+  gridGap: '1em',
   justifyContent: 'center'
 }
 
