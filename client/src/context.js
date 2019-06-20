@@ -23,7 +23,6 @@ export class Provider extends Component {
             price: '28.88',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'med',
             toppings: [
               'cheese'
             ]
@@ -40,7 +39,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_ZZ.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -50,7 +48,6 @@ export class Provider extends Component {
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_MX.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'pepperoni'
@@ -61,7 +58,6 @@ export class Provider extends Component {
             price: '12.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPH.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'sausage'
@@ -72,7 +68,6 @@ export class Provider extends Component {
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPV.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'pepperoni',
@@ -87,7 +82,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZUH.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'sausage',
@@ -101,7 +95,6 @@ export class Provider extends Component {
             price: '10.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_DX.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'onions',
@@ -115,7 +108,6 @@ export class Provider extends Component {
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCR.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese',
               'canadian bacon',
@@ -127,7 +119,6 @@ export class Provider extends Component {
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZBP.jpg',
             id: uuid.v4(),
-            size: 'medium',
             toppings: [
               'cheese'
             ]
@@ -137,7 +128,6 @@ export class Provider extends Component {
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPX.jpg',
             id: uuid.v4(),
-            size: 'medium',
             toppings: [
               'cheese',
               'pepperoni'
@@ -148,7 +138,6 @@ export class Provider extends Component {
             price: '14.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCK.jpg',
             id: uuid.v4(),
-            size: 'medium',
             toppings: [
               'cheese',
               'sausage'
@@ -159,7 +148,6 @@ export class Provider extends Component {
             price: '15.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCZ.jpg',
             id: uuid.v4(),
-            size: 'medium',
             toppings: [
               'cheese',
               'pepperoni',
@@ -174,7 +162,6 @@ export class Provider extends Component {
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PISPF.jpg',
             id: uuid.v4(),
-            size: 'medium',
             toppings: [
               'cheese',
               'sausage',
@@ -238,7 +225,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -255,7 +241,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -272,7 +257,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -289,7 +273,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -306,7 +289,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]
@@ -323,7 +305,6 @@ export class Provider extends Component {
             price: '9.99',
             image: 'https://www.averiecooks.com/wp-content/uploads/2018/04/pizza-9.jpg',
             id: uuid.v4(),
-            size: 'small',
             toppings: [
               'cheese'
             ]

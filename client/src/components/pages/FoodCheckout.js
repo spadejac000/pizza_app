@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Consumer} from '../../context';
+import {
+  Container
+} from 'react-bootstrap';
 
 class FoodCheckout extends Component {
   render() {
@@ -19,7 +22,10 @@ class FoodCheckout extends Component {
                 return(restaurant[foodCategory[0]].map((flavor) => {
                   if(flavor.type === specificFood) {
                     return(
-                      <h1>{flavor.type}</h1>
+                      <Container>
+                        <img src={flavor.image}/>
+                        <h1>{flavor.type}</h1>
+                      </Container>
                     )
                   }
                 }))
