@@ -36,7 +36,7 @@ export class Provider extends Component {
         title: 'Dominos',
         pizzas: [
           {
-            type: 'cheese',
+            type: 'ExtravaganZZa',
             price: '9.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_ZZ.jpg',
             id: uuid.v4(),
@@ -46,7 +46,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'pepperoni',
+            type: 'MeatZZa',
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_MX.jpg',
             id: uuid.v4(),
@@ -57,7 +57,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'sausage',
+            type: 'Philly Cheese Steak',
             price: '12.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPH.jpg',
             id: uuid.v4(),
@@ -68,7 +68,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'supreme',
+            type: 'Pacific Veggie',
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPV.jpg',
             id: uuid.v4(),
@@ -83,7 +83,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'meatlovers',
+            type: 'Honolulu Hawaiian',
             price: '9.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZUH.jpg',
             id: uuid.v4(),
@@ -97,7 +97,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'vegetarian',
+            type: 'Deluxe',
             price: '10.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_DX.jpg',
             id: uuid.v4(),
@@ -111,7 +111,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'hawaiian',
+            type: 'Cali Chicken Bacon Ranch',
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCR.jpg',
             id: uuid.v4(),
@@ -123,7 +123,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'cheese',
+            type: 'Buffalo Chicken',
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZBP.jpg',
             id: uuid.v4(),
@@ -133,7 +133,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'pepperoni',
+            type: 'Ultimate Pepperoni',
             price: '13.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZPX.jpg',
             id: uuid.v4(),
@@ -144,7 +144,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'sausage',
+            type: 'Memphis BBQ Chicken',
             price: '14.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCK.jpg',
             id: uuid.v4(),
@@ -155,7 +155,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'supreme',
+            type: 'Wisconsin 6 Cheese',
             price: '15.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PIZCZ.jpg',
             id: uuid.v4(),
@@ -170,7 +170,7 @@ export class Provider extends Component {
             ]
           },
           {
-            type: 'meatlovers',
+            type: 'Spinach & Feta',
             price: '11.99',
             image: 'https://cache.dominos.com/olo/5_63_1/assets/build/market/US/_en/images/img/products/larges/S_PISPF.jpg',
             id: uuid.v4(),

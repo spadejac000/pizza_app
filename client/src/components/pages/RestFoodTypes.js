@@ -35,7 +35,10 @@ class RestFoodTypes extends Component {
                         to={`${restaurant.path}/${Object.keys(value.foodImagesMain)[i]}`}
                         onClick={saveFoodType}
                       >
-                        <img src={value.foodImagesMain[foodTypes]} />
+                        <img 
+                          src={value.foodImagesMain[foodTypes]}
+                          alt='order the pizza'
+                        />
                         {foodTypes}
                       </Link>
                     )

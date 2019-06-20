@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
-import Menu from './pages/Menu';
 import RestaurantMenu from './RestaurantMenu';
 import RestFoodTypes from './pages/RestFoodTypes';
+import FoodCheckout from './pages/FoodCheckout';
 import {Consumer} from '../context';
 
 class Routes extends Component {
@@ -15,7 +15,6 @@ class Routes extends Component {
             <Router>
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/menu" component={Menu} />
                 <Route exact path={value.restaurants.map((restaurant) => (
                   restaurant.path
                 ))} component={RestFoodTypes} />
@@ -23,6 +22,7 @@ class Routes extends Component {
                   // this.props.location.pathname
                   restaurant.path + '/:' + value.savedFoodType
                 ))} component={RestaurantMenu}/>
+                <Route exact path="/Dominos/pizzas/ExtravaganZZa" component={FoodCheckout} />
               </Switch>
             </Router>
           )

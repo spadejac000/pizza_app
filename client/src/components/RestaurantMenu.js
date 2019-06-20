@@ -30,8 +30,8 @@ class RestaurantMenu extends Component {
                             src={food.image} 
                             style={{width: '100%', height: '120px', borderRadius: '5px'}} 
                             alt="here is a pizza"/>
-                          <Link to="#" className="btn btn-danger mt-1" style={{width: '100%'}}>ORDER</Link>
-                          <Link to="#" className="foodTypeTitle">{food.type}</Link>
+                          <Link to={this.props.location.pathname + '/' + food.type} className="btn btn-danger mt-1" style={{width: '100%'}}>ORDER</Link>
+                          <Link to={this.props.location.pathname + '/' + food.type} className="foodTypeTitle">{food.type}</Link>
                         </div>
                     )) 
                   
