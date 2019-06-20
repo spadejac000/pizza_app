@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Consumer} from '../../context';
+import {Link} from 'react-router-dom';
 import {
   Container
 } from 'react-bootstrap';
@@ -25,6 +26,7 @@ class FoodCheckout extends Component {
                       <Container>
                         <img src={flavor.image}/>
                         <h1>{flavor.type}</h1>
+                        <Link to="#" className="btn btn-warning">Add to Cart</Link>
                       </Container>
                     )
                   }
