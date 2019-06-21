@@ -26,7 +26,7 @@ class FoodCheckout extends Component {
                       <Container>
                         <img src={flavor.image}/>
                         <h1>{flavor.type}</h1>
-                        <Link to="#" className="btn btn-warning">Add to Cart</Link>
+                        <Link to="#" className="btn btn-warning"><i className="fas fa-cart-plus"></i> Add to Cart</Link>
                       </Container>
                     )
                   }

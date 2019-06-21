@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import RestaurantMenu from './RestaurantMenu';
 import RestFoodTypes from './pages/RestFoodTypes';
 import FoodCheckout from './pages/FoodCheckout';
+import Cart from './pages/Cart';
 import {Consumer} from '../context';
 
 class Routes extends Component {
@@ -23,6 +24,7 @@ class Routes extends Component {
                   restaurant.path + '/:' + value.savedFoodType
                 ))} component={RestaurantMenu}/>
                 <Route exact path="/Dominos/pizzas/ExtravaganZZa" component={FoodCheckout} />
+                <Route exact path="/cart" component={Cart} />
               </Switch>
             </Router>
           )
