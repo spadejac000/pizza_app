@@ -1,14 +1,30 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 app.use(cors())
 
-const PORT = process.env.PORT || 5000;
+// Body parser middleware
+app.use(bodyParser.json())
 
-app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`)
+// DB config
+const db = require('./config/keys').mongoURI;
+
+// connect to Mongo
+mongoose
+  .connect(db)
+  .then(() => {
+    console.log('MongoDB connected...')
+  })
+  .catch(err => console.log(err))
+
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`server running on port ${port}`)
 });
 
 app.use('/', require('./routes/api/pizza'))
