@@ -20,11 +20,13 @@ mongoose
   })
   .catch(err => console.log(err))
 
-
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`server running on port ${port}`)
 });
 
-app.use('/', require('./routes/api/pizza'))
+const pizza = require('./routes/api/pizzas')
+
+// Use Routes
+app.use('/api/pizzas', pizza)
