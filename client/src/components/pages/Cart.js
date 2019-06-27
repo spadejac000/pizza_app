@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Container, ListGroup, ListGroupItem, Row, Col} from 'react-bootstrap';
+import {Container, ListGroup, ListGroupItem, Row, Col, Button} from 'react-bootstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 class Cart extends Component {
@@ -16,6 +16,11 @@ class Cart extends Component {
   }
 
   render() {
+    const deleteFromCart = async () => {
+      await this.setState({})
+      
+      console.log(this.state.food)
+    }
     return(
       <Container>
         <Row>
@@ -35,7 +40,15 @@ class Cart extends Component {
                         <img style={{width: '100px', borderRadius: '5px'}} src={food.image} />
                       </Col>
                       <Col>
-                        <h6>{food.pizzaName}</h6>
+                        <Row>
+                          <h4>{food.pizzaName}</h4>
+                        </Row>
+                        <Row>
+                          <Button 
+                            className="btn-danger"
+                            onClick={deleteFromCart}
+                          >Delete</Button>
+                        </Row>
                       </Col>
                       <Col style={{textAlign: 'end'}}>
                         <h6>{food.price}</h6>
@@ -47,7 +60,7 @@ class Cart extends Component {
                   </TransitionGroup>
                 </CSSTransition>
               </ListGroupItem>
-          ))}
+            ))}
         </ListGroup>
       </Container>
     )
