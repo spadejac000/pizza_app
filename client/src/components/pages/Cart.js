@@ -16,11 +16,11 @@ class Cart extends Component {
   }
 
   render() {
-    const deleteFromCart = async () => {
-      await this.setState({})
-      
-      console.log(this.state.food)
+
+    const consoleLog = () => {
+      console.log('poop')
     }
+
     return(
       <Container>
         <Row>
@@ -33,7 +33,7 @@ class Cart extends Component {
           { this.state.food.map(
             food => (
               <ListGroupItem>
-                <CSSTransition>
+                <CSSTransition timeout={500} classNames="fade">
                   <TransitionGroup>
                     <Row>
                       <Col>
@@ -46,7 +46,16 @@ class Cart extends Component {
                         <Row>
                           <Button 
                             className="btn-danger"
-                            onClick={deleteFromCart}
+                            // onClick={this.setState(state => ({
+                            //   food: state.food.filter(food => food.id !== id)
+                            // }))}
+                            onClick={() => {
+                              this.setState({
+                                food: this.state.food.filter(food => food.id !== this.state.food.id)
+                              })
+
+                              axios.delete('http://localhost:5000/api/pizzas', this.state);
+                            }}
                           >Delete</Button>
                         </Row>
                       </Col>
