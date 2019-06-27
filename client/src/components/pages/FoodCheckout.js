@@ -32,13 +32,6 @@ class FoodCheckout extends Component {
                 return(restaurant[foodCategory[0]].map((flavor) => {
                   if(flavor.type === specificFood) {
                     const addToCart = async () => {
-                      // await this.setState({
-                      //   image: flavor.image,
-                      //   pizzaName: flavor.type,
-                      //   quantity: 1,
-                      //   price: flavor.price
-                      // })
-                      // console.log(this.state)
 
                       await this.setState({
                         image: flavor.image,
