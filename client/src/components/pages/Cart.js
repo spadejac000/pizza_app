@@ -19,7 +19,7 @@ class Cart extends Component {
     return(
       <Container>
         <ListGroup>
-          { this.state.food.map(food => <ListGroup.Item><img src={food.image} />{food.pizzaName} {food.quantity} {food.price}</ListGroup.Item>)}
+          { this.state.food.map(food => <ListGroup.Item><img style={{width: '100px'}} src={food.image} />{food.pizzaName} {food.quantity} {food.price}</ListGroup.Item>)}
         </ListGroup>
       </Container>
     )

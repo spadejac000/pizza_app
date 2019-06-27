@@ -12,14 +12,15 @@ router.get('/', (req, res) => {
 
 // POST api/pizzas
 router.post('/', (req, res) => {
-  const newPizza = new Pizza({
-    pizzaName: req.body.pizzaName,
-    price: req.body.price,
-    quantity: req.body.quantity,
-    image: req.body.image
-  });
+  // const newPizza = new Pizza({
+  //   pizzaName: req.body.pizzaName,
+  //   price: req.body.price,
+  //   quantity: req.body.quantity,
+  //   image: req.body.image
+  // });
 
-  newPizza.save().then(pizza => res.json(pizza))
+  // newPizza.save().then(pizza => res.json(pizza))
+  console.log(req.body)
 })
 
 // DELETE api/pizzas
