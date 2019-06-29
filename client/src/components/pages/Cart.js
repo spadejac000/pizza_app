@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import uuid from 'uuid';
 import {Container, ListGroup, ListGroupItem, Row, Col, Button} from 'react-bootstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 class Cart extends Component {
   state = {
-    food: []
+    food: [
+      {
+        pizzaName: 'poop',
+        image: 'poop.png',
+        price: 10.00,
+        quantity: 2,
+        _id: uuid.v4()
+      }
+    ]
   }
 
   componentDidMount() {
@@ -31,17 +40,17 @@ class Cart extends Component {
         </Row>
         <ListGroup>
           { this.state.food.map(
-            food => (
+            ({_id, pizzaName, image, price, quantity}) => (
               <ListGroupItem>
-                <CSSTransition timeout={500} classNames="fade">
+                <CSSTransition key={_id} timeout={500} classNames="fade">
                   <TransitionGroup>
                     <Row>
                       <Col>
-                        <img style={{width: '100px', borderRadius: '5px'}} src={food.image} />
+                        <img style={{width: '100px', borderRadius: '5px'}} src={image} />
                       </Col>
                       <Col>
                         <Row>
-                          <h4>{food.pizzaName}</h4>
+                          <h4>{pizzaName}</h4>
                         </Row>
                         <Row>
                           <Button 
@@ -50,8 +59,9 @@ class Cart extends Component {
                             //   food: state.food.filter(food => food.id !== id)
                             // }))}
                             onClick={() => {
+                              // console.log(food._id, food._id)
                               this.setState({
-                                food: this.state.food.filter(food => food.id !== this.state.food.id)
+                                food: this.state.food.filter(food => food._id !== _id)
                               })
 
                               axios.delete('http://localhost:5000/api/pizzas', this.state);
@@ -60,10 +70,10 @@ class Cart extends Component {
                         </Row>
                       </Col>
                       <Col style={{textAlign: 'end'}}>
-                        <h6>{food.price}</h6>
+                        <h6>{price}</h6>
                       </Col>
                       <Col style={{textAlign: 'end'}}>
-                        <h6>{food.quantity}</h6>
+                        <h6>{quantity}</h6>
                       </Col>
                     </Row>
                   </TransitionGroup>
