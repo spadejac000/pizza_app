@@ -3,6 +3,7 @@ import axios from 'axios';
 import uuid from 'uuid';
 import {Container, ListGroup, ListGroupItem, Row, Col, Button, Card} from 'react-bootstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import Checkout from '../Checkout';
 
 class Cart extends Component {
   state = {
@@ -94,7 +95,8 @@ class Cart extends Component {
             <Card style={{ width: '18rem' }}>
               <Card.Body>
                 <Card.Title>Subtotal (1 item): ${this.state.price}</Card.Title>
-                <Button variant="warning">Proceed to checkout</Button>
+                <Checkout/>
+                {/* <Button variant="warning">Checkout</Button> */}
               </Card.Body>
             </Card>
           </Col>
