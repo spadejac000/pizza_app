@@ -6,6 +6,7 @@ import RestFoodTypes from './pages/RestFoodTypes';
 import FoodCheckout from './pages/FoodCheckout';
 import Cart from './pages/Cart';
 import {Consumer} from '../context';
+import Success from './pages/Success';
 
 class Routes extends Component {
   render() {
@@ -25,6 +26,7 @@ class Routes extends Component {
                 ))} component={RestaurantMenu}/>
                 <Route exact path="/Dominos/pizzas/ExtravaganZZa" component={FoodCheckout} />
                 <Route exact path="/cart" component={Cart} />
+                <Route exact path="/success" component={Success} />
               </Switch>
             </Router>
           )

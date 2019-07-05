@@ -6,6 +6,7 @@ class Checkout extends Component {
     const script = document.createElement("script");
 
     script.src = "https://checkout.stripe.com/checkout.js";
+    script.dataKey = "pk_test_SDgPMwlzPSK2Fo1LNTcCKhYr00pduFRDkx";
     script.async = true;
 
     document.body.appendChild(script);
@@ -13,10 +14,10 @@ class Checkout extends Component {
 
   render() {
     return(
-      <form action="/charge" method="POST">
+      <form action="http://localhost:5000/charge" method="POST">
         <script
           src="https://checkout.stripe.com/checkout.js" className="stripe-button"
-          // data-key={{stripePublishableKey}}
+          data-key="pk_test_SDgPMwlzPSK2Fo1LNTcCKhYr00pduFRDkx"
           data-amount="2500"
           data-name="Pizza App Checkout"
           data-description="Pizza app cart. Checking out items"
