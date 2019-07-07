@@ -9,7 +9,9 @@ class Cart extends Component {
   state = {
     food: [
     ],
-    price: 29.97
+    price: 29.97,
+    isOpen: false,
+    modal: false
   }
 
   componentDidMount() {
@@ -20,11 +22,6 @@ class Cart extends Component {
   }
 
   render() {
-
-    const consoleLog = () => {
-      console.log('poop')
-    }
-
     return(
       <Container>
         <Row>
@@ -95,20 +92,27 @@ class Cart extends Component {
             <Card style={{ width: '18rem' }}>
               <Card.Body>
                 <Card.Title>Subtotal (1 item): ${this.state.price}</Card.Title>
-                <Checkout/>
-                {/* <Button variant="warning">Checkout</Button> */}
+                <Button 
+                  variant="warning"
+                  onClick={(e) => {
+                    this.setState({
+                      isOpen: true,
+                      modal: true
+                    })
+                  }}
+                >Checkout</Button>
               </Card.Body>
             </Card>
           </Col>
         </Row>
+
+        <Checkout isOpen={this.state.isOpen} onClose={(e) => this.setState({
+          isOpen: false
+        })}/>
         
       </Container>
     )
   }
 }
-
-// const cartItemsStyle = {
-//   border:
-// }
 
 export default Cart;
